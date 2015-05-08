@@ -13,7 +13,6 @@ class WordCountSpecs extends FlatSpec with Matchers {
   }
 
   it should "count multiple occurrences" in {
-    pending
     val phrase = new Phrase("one fish two fish red fish blue fish")
     val counts = Map("one" -> 1, "fish" -> 4, "two" -> 1, "red" -> 1, "blue" -> 1)
     phrase.wordCount should be (counts)
