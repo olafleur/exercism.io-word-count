@@ -1,7 +1,14 @@
 class Phrase(s: String) {
-  def wordCount() =
-    s.split(" ")
+
+  def removePunctuation(s: String): String = s.replaceAll("(( )?:|!|&|@|\\Q$\\E|%|\\Q^\\E)","")
+
+  def wordCount() = {
+    val s2 = removePunctuation(s)
+
+    s2.split(" ")
       .toList
       .groupBy(w => w)
       .mapValues(_.size)
+  }
+
 }
