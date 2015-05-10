@@ -1,7 +1,7 @@
 class Phrase(s: String) {
 
   def removePunctuation(s: String): String =
-    s.replaceAll("(( )?:|!|&|@|\\Q$\\E|%|\\Q^\\E)","")
+    s.replaceAll("(( )?:|!|&|@|\\Q$\\E|%|\\Q^\\E|\\Q.\\E)","")
       .replaceAll("( )?,( )?", " ")
 
   def wordCount() = {
