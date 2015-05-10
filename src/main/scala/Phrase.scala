@@ -1,6 +1,7 @@
 class Phrase(s: String) {
   def wordCount() =
     s.split(" ")
-      .map(_ -> 1)
-      .toMap
+      .toList
+      .groupBy(w => w)
+      .mapValues(_.size)
 }
